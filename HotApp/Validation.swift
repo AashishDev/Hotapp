@@ -18,15 +18,15 @@ class Validation: NSObject {
             return false
         }
         else if (username.characters.count == 0 && password.characters.count != 0){
-            Utils.showAlert(title:kloginTitle, msg: "Username is not empty")
+            Utils.showAlert(title:kloginTitle, msg: kUserPassError)
             return false
         }
         else if (username.characters.count != 0 && password.characters.count == 0){
-            Utils.showAlert(title:kloginTitle, msg:"Password is not empty")
+            Utils.showAlert(title:kloginTitle, msg:kUserPassError)
             return false
         }
         else if ((password.characters.count) < 6){
-            Utils.showAlert(title:kloginTitle, msg: "Password is too short")
+            Utils.showAlert(title:kloginTitle, msg: kUserPassError)
             return false
         }
         return true
