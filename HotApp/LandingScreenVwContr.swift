@@ -16,7 +16,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        wallFeedTable.rowHeight = 275
+        wallFeedTable.rowHeight = 265
     }
     
     // Table Method ***************////*******************
@@ -40,7 +40,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
             
             layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
             layout.minimumInteritemSpacing = 0
-            layout.minimumLineSpacing = 10.0
+            layout.minimumLineSpacing = 5.0
             layout.scrollDirection = UICollectionViewScrollDirection.horizontal
             layout.invalidateLayout()
         }
