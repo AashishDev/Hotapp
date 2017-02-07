@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE20B33D1E4A37CB00DF1080 /* LandingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE20B33C1E4A37CB00DF1080 /* LandingService.swift */; };
+		AE20B33F1E4A39EA00DF1080 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE20B33E1E4A39EA00DF1080 /* Photo.swift */; };
 		AE28FD401E35E29E0066E004 /* r1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE28FD3F1E35E29E0066E004 /* r1.jpg */; };
 		AE28FD441E35E2AF0066E004 /* r2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE28FD411E35E2AF0066E004 /* r2.jpg */; };
 		AE28FD451E35E2AF0066E004 /* r3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE28FD421E35E2AF0066E004 /* r3.jpg */; };
@@ -22,15 +24,21 @@
 		AED24F341E2FC18500431DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED24F331E2FC18500431DA7 /* Assets.xcassets */; };
 		AED24F371E2FC18500431DA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED24F351E2FC18500431DA7 /* LaunchScreen.storyboard */; };
 		AED24F471E2FC22300431DA7 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED24F461E2FC22300431DA7 /* Utils.swift */; };
-		AED24F491E2FC24C00431DA7 /* ServerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED24F481E2FC24C00431DA7 /* ServerHelper.swift */; };
+		AED24F491E2FC24C00431DA7 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED24F481E2FC24C00431DA7 /* NetworkLayer.swift */; };
 		AED24F4B1E2FC25D00431DA7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED24F4A1E2FC25D00431DA7 /* Constant.swift */; };
 		AED24F4D1E2FC28B00431DA7 /* LoginViewContr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED24F4C1E2FC28B00431DA7 /* LoginViewContr.swift */; };
 		AED24F4F1E2FC2B200431DA7 /* LandingScreenVwContr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED24F4E1E2FC2B200431DA7 /* LandingScreenVwContr.swift */; };
 		AED24F521E2FCE0800431DA7 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED24F511E2FCE0800431DA7 /* NetworkConfig.swift */; };
 		AED24F561E2FD12A00431DA7 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED24F551E2FD12A00431DA7 /* Validation.swift */; };
+		C0599525E17C28A298D56980 /* Pods_HotApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA3783AE970D563FB4DE32D /* Pods_HotApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B43BB4D851533E0F4B94B39 /* Pods-HotApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotApp/Pods-HotApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8DA3783AE970D563FB4DE32D /* Pods_HotApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A315D7050E2E7491045A1C96 /* Pods-HotApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotApp/Pods-HotApp.release.xcconfig"; sourceTree = "<group>"; };
+		AE20B33C1E4A37CB00DF1080 /* LandingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingService.swift; sourceTree = "<group>"; };
+		AE20B33E1E4A39EA00DF1080 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		AE28FD3F1E35E29E0066E004 /* r1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = r1.jpg; sourceTree = "<group>"; };
 		AE28FD411E35E2AF0066E004 /* r2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = r2.jpg; sourceTree = "<group>"; };
 		AE28FD421E35E2AF0066E004 /* r3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = r3.jpg; sourceTree = "<group>"; };
@@ -50,7 +58,7 @@
 		AED24F361E2FC18500431DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AED24F381E2FC18500431DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AED24F461E2FC22300431DA7 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		AED24F481E2FC24C00431DA7 /* ServerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerHelper.swift; sourceTree = "<group>"; };
+		AED24F481E2FC24C00431DA7 /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		AED24F4A1E2FC25D00431DA7 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AED24F4C1E2FC28B00431DA7 /* LoginViewContr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewContr.swift; sourceTree = "<group>"; };
 		AED24F4E1E2FC2B200431DA7 /* LandingScreenVwContr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingScreenVwContr.swift; sourceTree = "<group>"; };
@@ -63,12 +71,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0599525E17C28A298D56980 /* Pods_HotApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		282F39DE50BC92BEA976AAC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DA3783AE970D563FB4DE32D /* Pods_HotApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE20B33B1E4A377800DF1080 /* ServerLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AE20B33C1E4A37CB00DF1080 /* LandingService.swift */,
+			);
+			name = ServerLayer;
+			sourceTree = "<group>";
+		};
 		AE28FD3E1E35DEC50066E004 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +107,8 @@
 			children = (
 				AED24F2B1E2FC18500431DA7 /* HotApp */,
 				AED24F2A1E2FC18500431DA7 /* Products */,
+				B2DE3DA97B0AF64B39283ABE /* Pods */,
+				282F39DE50BC92BEA976AAC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,11 +123,12 @@
 		AED24F2B1E2FC18500431DA7 /* HotApp */ = {
 			isa = PBXGroup;
 			children = (
-				AED24F451E2FC1F100431DA7 /* AppDelegate */,
 				AED24F401E2FC1A800431DA7 /* Constant */,
-				AED24F441E2FC1E100431DA7 /* Lib */,
-				AED24F411E2FC1B100431DA7 /* ServerHelper */,
 				AED24F3E1E2FC19300431DA7 /* Utils */,
+				AED24F441E2FC1E100431DA7 /* Lib */,
+				AED24F451E2FC1F100431DA7 /* AppDelegate */,
+				AED24F411E2FC1B100431DA7 /* NetworkLayer */,
+				AE20B33B1E4A377800DF1080 /* ServerLayer */,
 				AED24F431E2FC1D100431DA7 /* ViewControllers */,
 				AED24F421E2FC1BD00431DA7 /* UIView */,
 				AED24F3F1E2FC19D00431DA7 /* Models */,
@@ -129,6 +157,7 @@
 		AED24F3F1E2FC19D00431DA7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AE20B33E1E4A39EA00DF1080 /* Photo.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -141,13 +170,13 @@
 			name = Constant;
 			sourceTree = "<group>";
 		};
-		AED24F411E2FC1B100431DA7 /* ServerHelper */ = {
+		AED24F411E2FC1B100431DA7 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				AED24F481E2FC24C00431DA7 /* ServerHelper.swift */,
+				AED24F481E2FC24C00431DA7 /* NetworkLayer.swift */,
 				AED24F511E2FCE0800431DA7 /* NetworkConfig.swift */,
 			);
-			name = ServerHelper;
+			name = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		AED24F421E2FC1BD00431DA7 /* UIView */ = {
@@ -194,6 +223,15 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		B2DE3DA97B0AF64B39283ABE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B43BB4D851533E0F4B94B39 /* Pods-HotApp.debug.xcconfig */,
+				A315D7050E2E7491045A1C96 /* Pods-HotApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AED24F3B1E2FC18500431DA7 /* Build configuration list for PBXNativeTarget "HotApp" */;
 			buildPhases = (
+				0F23DFCD24472AA0F88E31D6 /* [CP] Check Pods Manifest.lock */,
 				AED24F251E2FC18500431DA7 /* Sources */,
 				AED24F261E2FC18500431DA7 /* Frameworks */,
 				AED24F271E2FC18500431DA7 /* Resources */,
+				7C87E0693554A859E69F3FF1 /* [CP] Embed Pods Frameworks */,
+				9108C7F7C922C60F794E52FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,7 +262,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Aashish Tyagi";
 				TargetAttributes = {
 					AED24F281E2FC18500431DA7 = {
@@ -270,17 +311,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F23DFCD24472AA0F88E31D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C87E0693554A859E69F3FF1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotApp/Pods-HotApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9108C7F7C922C60F794E52FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotApp/Pods-HotApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AED24F251E2FC18500431DA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE20B33F1E4A39EA00DF1080 /* Photo.swift in Sources */,
 				AED24F521E2FCE0800431DA7 /* NetworkConfig.swift in Sources */,
 				AED24F2D1E2FC18500431DA7 /* AppDelegate.swift in Sources */,
 				AED24F471E2FC22300431DA7 /* Utils.swift in Sources */,
-				AED24F491E2FC24C00431DA7 /* ServerHelper.swift in Sources */,
+				AED24F491E2FC24C00431DA7 /* NetworkLayer.swift in Sources */,
 				AED24F4F1E2FC2B200431DA7 /* LandingScreenVwContr.swift in Sources */,
 				AED24F4D1E2FC28B00431DA7 /* LoginViewContr.swift in Sources */,
+				AE20B33D1E4A37CB00DF1080 /* LandingService.swift in Sources */,
 				AED24F561E2FD12A00431DA7 /* Validation.swift in Sources */,
 				AE28FD581E3632480066E004 /* RestraCollectionViewCell.swift in Sources */,
 				AED24F4B1E2FC25D00431DA7 /* Constant.swift in Sources */,
@@ -331,6 +422,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -353,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -382,6 +474,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -398,7 +491,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -409,6 +502,7 @@
 		};
 		AED24F3C1E2FC18500431DA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B43BB4D851533E0F4B94B39 /* Pods-HotApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HotApp/Info.plist;
@@ -421,6 +515,7 @@
 		};
 		AED24F3D1E2FC18500431DA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A315D7050E2E7491045A1C96 /* Pods-HotApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HotApp/Info.plist;

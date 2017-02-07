@@ -12,9 +12,17 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet var wallFeedTable: UITableView!
     let identifier = "WallFeedCell"
-    
+    let photoStr = "https://jsonplaceholder.typicode.com/posts"
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LandingService.getPhotoList(urlString: photoStr) { (dataArray) in
+            print("Final result is: \(dataArray)")
+        }
+        
+        
+        
         
         wallFeedTable.rowHeight = 265
     }
