@@ -10,13 +10,13 @@ import UIKit
 
 class Photo: NSObject {
 
-    var body = ""
+    var url = ""
     var title = ""
     var userid = ""
     
     init(dictionary:NSDictionary) {
         
-        self.body = dictionary.value(forKey:"body") as! String
+        self.url = dictionary.value(forKey:"url") as! String
         self.title = dictionary.value(forKey:"title") as! String
     }
 }

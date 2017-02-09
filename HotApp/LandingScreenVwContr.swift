@@ -12,18 +12,18 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet var wallFeedTable: UITableView!
     let identifier = "WallFeedCell"
-    let photoStr = "https://jsonplaceholder.typicode.com/posts"
+    let photoStr = "https://jsonplaceholder.typicode.com/photos"
+    
+    var photoArray = [Photo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         LandingService.getPhotoList(urlString: photoStr) { (dataArray) in
+           
+            self.photoArray = dataArray;
             print("Final result is: \(dataArray)")
         }
-        
-        
-        
-        
         wallFeedTable.rowHeight = 265
     }
     
@@ -60,13 +60,16 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     // Collection Method ***************////*******************
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
     
-        return 10;
+        return photoArray.count;
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
-       let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"PostCollectionCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"PostCollectionCell", for: indexPath)
+        
+        let group = photoArray[indexPath.row]
+        
 
        return cell;
     }
