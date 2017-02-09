@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class Utils: NSObject {
     
@@ -17,6 +18,15 @@ class Utils: NSObject {
         alert.addAction(UIAlertAction(title:"Okay", style: UIAlertActionStyle.default, handler: nil))
         UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
     }
+    
+    //2 Set Image by Url
+    static func setImage(imgVw:UIImageView,imageStr:String,placeHolderImg:String?) {
+        
+        let url = URL(string:imageStr)!
+        let placeholderImage = UIImage(named:"")
+        imgVw.af_setImage(withURL: url, placeholderImage: placeholderImage)
+    }
+    
 }
 
 

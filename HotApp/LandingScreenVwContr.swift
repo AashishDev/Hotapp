@@ -22,7 +22,8 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         LandingService.getPhotoList(urlString: photoStr) { (dataArray) in
            
             self.photoArray = dataArray;
-            print("Final result is: \(dataArray)")
+           // print("Final result is: \(dataArray)")
+            self.wallFeedTable.reloadData()
         }
         wallFeedTable.rowHeight = 265
     }
@@ -52,7 +53,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
             layout.scrollDirection = UICollectionViewScrollDirection.horizontal
             layout.invalidateLayout()
         }
-        
+        cell.wallPostCollectionVw.reloadData()
         
         return cell;
     }
@@ -69,7 +70,9 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"PostCollectionCell", for: indexPath)
         
         let group = photoArray[indexPath.row]
-        
+        let imageStr = group.url
+        let imageVw = cell.contentView.viewWithTag(100) as! UIImageView
+        Utils.setImage(imgVw: imageVw, imageStr: imageStr, placeHolderImg: nil)
 
        return cell;
     }
