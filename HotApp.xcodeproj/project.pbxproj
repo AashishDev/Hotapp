@@ -19,6 +19,7 @@
 		AE28FD501E35E2BF0066E004 /* r8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE28FD4B1E35E2BF0066E004 /* r8.jpg */; };
 		AE28FD581E3632480066E004 /* RestraCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE28FD571E3632480066E004 /* RestraCollectionViewCell.swift */; };
 		AE48779F1E366DAF002E0447 /* WallFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48779E1E366DAF002E0447 /* WallFeedCell.swift */; };
+		AE76E0421E4CD6310067F6A4 /* feedPost.json in Resources */ = {isa = PBXBuildFile; fileRef = AE76E0411E4CD6310067F6A4 /* feedPost.json */; };
 		AED24F2D1E2FC18500431DA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED24F2C1E2FC18500431DA7 /* AppDelegate.swift */; };
 		AED24F321E2FC18500431DA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED24F301E2FC18500431DA7 /* Main.storyboard */; };
 		AED24F341E2FC18500431DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED24F331E2FC18500431DA7 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		AE28FD4B1E35E2BF0066E004 /* r8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = r8.jpg; sourceTree = "<group>"; };
 		AE28FD571E3632480066E004 /* RestraCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestraCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE48779E1E366DAF002E0447 /* WallFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallFeedCell.swift; sourceTree = "<group>"; };
+		AE76E0411E4CD6310067F6A4 /* feedPost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feedPost.json; sourceTree = "<group>"; };
 		AEBDDBAC1E3138EC0034E53D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		AEBDDBAD1E3138EC0034E53D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		AED24F291E2FC18500431DA7 /* HotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +220,7 @@
 		AED24F501E2FC2C600431DA7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				AE76E0411E4CD6310067F6A4 /* feedPost.json */,
 				AED24F331E2FC18500431DA7 /* Assets.xcassets */,
 			);
 			name = Resource;
@@ -302,6 +305,7 @@
 				AED24F371E2FC18500431DA7 /* LaunchScreen.storyboard in Resources */,
 				AE28FD441E35E2AF0066E004 /* r2.jpg in Resources */,
 				AED24F341E2FC18500431DA7 /* Assets.xcassets in Resources */,
+				AE76E0421E4CD6310067F6A4 /* feedPost.json in Resources */,
 				AE28FD451E35E2AF0066E004 /* r3.jpg in Resources */,
 				AED24F321E2FC18500431DA7 /* Main.storyboard in Resources */,
 				AE28FD4E1E35E2BF0066E004 /* r6.jpg in Resources */,

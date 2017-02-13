@@ -19,6 +19,9 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        Utils.getFeedList()
+        
         LandingService.getPhotoList(urlString: photoStr) { (dataArray) in
            
             self.photoArray = dataArray;
