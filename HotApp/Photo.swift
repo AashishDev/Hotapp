@@ -7,16 +7,31 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Photo: NSObject {
 
     var url = ""
-    var title = ""
-    var userid = ""
+    var name = ""
+    var postArray = [Post]()
     
-    init(dictionary:NSDictionary) {
+    init(jsonDic:JSON) {
         
-        self.url = dictionary.value(forKey:"url") as! String
-        self.title = dictionary.value(forKey:"title") as! String
+        if let urlString = jsonDic["url"].string {
+            self.url =  urlString
+        }
+        if let titleString = jsonDic["name"].string {
+            self.name =  titleString
+        }
+        if let postArr = jsonDic["post"].array {
+            
+            var arrData =  [Post]()
+            for result in postArr {
+                
+                let post =  Post(jsonDic:result)
+                arrData.append(post)
+            }
+            self.postArray =  arrData
+        }
     }
 }

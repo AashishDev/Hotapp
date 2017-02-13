@@ -13,28 +13,31 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet var wallFeedTable: UITableView!
     let identifier = "WallFeedCell"
     let photoStr = "https://jsonplaceholder.typicode.com/photos"
+
     
     var photoArray = [Photo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        Utils.getFeedList()
-        
-        LandingService.getPhotoList(urlString: photoStr) { (dataArray) in
-           
+        Utils.getFeedList { (dataArray) in
+            
             self.photoArray = dataArray;
-           // print("Final result is: \(dataArray)")
-            self.wallFeedTable.reloadData()
+
         }
+//        LandingService.getPhotoList(urlString: photoStr) { (dataArray) in
+//           
+//            self.photoArray = dataArray;
+//           // print("Final result is: \(dataArray)")
+//            self.wallFeedTable.reloadData()
+//        }
         wallFeedTable.rowHeight = 265
     }
     
     // Table Method ***************////*******************
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
-        return 10;
+        return  self.photoArray.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,6 +59,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
             layout.scrollDirection = UICollectionViewScrollDirection.horizontal
             layout.invalidateLayout()
         }
+        cell.wallPostCollectionVw.tag = indexPath.row
         cell.wallPostCollectionVw.reloadData()
         
         return cell;
@@ -69,6 +73,8 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        print(collectionView.tag)
     
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"PostCollectionCell", for: indexPath)
         

@@ -18,8 +18,8 @@ public class LandingService: NSObject {
             let dataArray: NSArray = (response!.arrayObject)! as NSArray
             for dataValue in dataArray {
                 
-                let photo = Photo(dictionary: dataValue as! NSDictionary)
-                photoList.append(photo)
+               // let photo = Photo(jsonDic: dataValue as! NSDictionary)
+               // photoList.append(photo)
             }
             completion(photoList)
         }

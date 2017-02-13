@@ -12,6 +12,7 @@ import AlamofireImage
 
 class Utils: NSObject {
     
+
     //1 Alert
     static func showAlert(title:String,msg:String) {
         
@@ -28,7 +29,7 @@ class Utils: NSObject {
         imgVw.af_setImage(withURL: url, placeholderImage: placeholderImage)
     }
     
-    static func getFeedList(){
+    static func getFeedList(completion:@escaping (_ photoList:[Photo]) -> Void){
     
         if let path = Bundle.main.path(forResource: "feedPost", ofType: "json") {
             do {
@@ -36,7 +37,15 @@ class Utils: NSObject {
                 let jsonObj = JSON(data: data)
                 if jsonObj != JSON.null {
                     
-                    print("jsonData:\(jsonObj)")
+                    //print("jsonData:\(jsonObj)")
+                    var arrData =  [Photo]()
+                    for result in jsonObj["person"].arrayValue {
+                       
+                        let comment =  Photo(jsonDic:result)
+                        arrData.append(comment)
+                    }
+                    completion(arrData)
+                    print("arrray:\(arrData)")
                 } else {
                     print("Could not get json from file, make sure that file contains valid json.")
                 }

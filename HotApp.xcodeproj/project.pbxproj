@@ -20,6 +20,7 @@
 		AE28FD581E3632480066E004 /* RestraCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE28FD571E3632480066E004 /* RestraCollectionViewCell.swift */; };
 		AE48779F1E366DAF002E0447 /* WallFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48779E1E366DAF002E0447 /* WallFeedCell.swift */; };
 		AE76E0421E4CD6310067F6A4 /* feedPost.json in Resources */ = {isa = PBXBuildFile; fileRef = AE76E0411E4CD6310067F6A4 /* feedPost.json */; };
+		AE8C0D691E521C3E00924207 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8C0D681E521C3E00924207 /* Post.swift */; };
 		AED24F2D1E2FC18500431DA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED24F2C1E2FC18500431DA7 /* AppDelegate.swift */; };
 		AED24F321E2FC18500431DA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED24F301E2FC18500431DA7 /* Main.storyboard */; };
 		AED24F341E2FC18500431DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED24F331E2FC18500431DA7 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		AE28FD571E3632480066E004 /* RestraCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestraCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE48779E1E366DAF002E0447 /* WallFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallFeedCell.swift; sourceTree = "<group>"; };
 		AE76E0411E4CD6310067F6A4 /* feedPost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feedPost.json; sourceTree = "<group>"; };
+		AE8C0D681E521C3E00924207 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AEBDDBAC1E3138EC0034E53D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		AEBDDBAD1E3138EC0034E53D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		AED24F291E2FC18500431DA7 /* HotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				AE20B33E1E4A39EA00DF1080 /* Photo.swift */,
+				AE8C0D681E521C3E00924207 /* Post.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				AED24F521E2FCE0800431DA7 /* NetworkConfig.swift in Sources */,
 				AED24F2D1E2FC18500431DA7 /* AppDelegate.swift in Sources */,
 				AED24F471E2FC22300431DA7 /* Utils.swift in Sources */,
+				AE8C0D691E521C3E00924207 /* Post.swift in Sources */,
 				AED24F491E2FC24C00431DA7 /* NetworkLayer.swift in Sources */,
 				AED24F4F1E2FC2B200431DA7 /* LandingScreenVwContr.swift in Sources */,
 				AED24F4D1E2FC28B00431DA7 /* LoginViewContr.swift in Sources */,
