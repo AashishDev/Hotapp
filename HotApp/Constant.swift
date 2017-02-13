@@ -19,9 +19,8 @@ let kloginTitle = "Login Error"
 let kUserPassError = "Username and Password is not empty"
 
 
-
-
-
+let kUserPlaceholder = "user_placeholder.png"
+let kPostPlaceholder = "post_placeholder.png"
 
 
 

@@ -25,7 +25,7 @@ class Utils: NSObject {
     static func setImage(imgVw:UIImageView,imageStr:String,placeHolderImg:String?) {
         
         let url = URL(string:imageStr)!
-        let placeholderImage = UIImage(named:"")
+        let placeholderImage = UIImage(named:placeHolderImg!)
         imgVw.af_setImage(withURL: url, placeholderImage: placeholderImage)
     }
     

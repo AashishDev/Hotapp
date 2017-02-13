@@ -10,6 +10,8 @@ import UIKit
 
 class WallFeedCell: UITableViewCell {
     
+    @IBOutlet var userName: UILabel!
+    @IBOutlet var userImageView: UIImageView!
     @IBOutlet var wallPostCollectionVw: UICollectionView!
     
     override func awakeFromNib() {

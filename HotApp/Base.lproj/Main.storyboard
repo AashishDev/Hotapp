@@ -121,7 +121,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYE-wF-YGe" userLabel="HeaderVw">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="r1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wqT-AA-XjE">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="r1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wqT-AA-XjE">
                                                                     <rect key="frame" x="8" y="10" width="40" height="40"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="40" id="UJ2-68-alx"/>
@@ -282,6 +282,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="userImageView" destination="wqT-AA-XjE" id="grT-4t-pZT"/>
+                                            <outlet property="userName" destination="rDG-p0-RQm" id="zUb-Bv-5mC"/>
                                             <outlet property="wallPostCollectionVw" destination="t0G-hV-3ym" id="BQI-Sl-Inw"/>
                                         </connections>
                                     </tableViewCell>

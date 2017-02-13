@@ -44,9 +44,12 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "WallFeedCell") as! WallFeedCell
         
+        let photo = photoArray[indexPath.row]
+        Utils.setImage(imgVw: cell.userImageView, imageStr: photo.url, placeHolderImg: kUserPlaceholder)
+        cell.userName.text = photo.name
+        
         cell.wallPostCollectionVw.dataSource = self
         cell.wallPostCollectionVw.delegate = self
- 
         
         if let layout = cell.wallPostCollectionVw.collectionViewLayout as? UICollectionViewFlowLayout {
             let itemWidth = (view.bounds.width / 2.0) - 5
@@ -68,7 +71,10 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     // Collection Method ***************////*******************
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
     
-        return photoArray.count;
+        let rowIndex = collectionView.tag
+        let photo = photoArray[rowIndex]
+        let postArray = photo.postArray
+        return postArray.count;
     }
     
     
@@ -77,11 +83,15 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         print(collectionView.tag)
     
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"PostCollectionCell", for: indexPath)
+        let rowIndex = collectionView.tag
         
-        let group = photoArray[indexPath.row]
+        let photo = photoArray[rowIndex]
+        let postArray = photo.postArray
+        
+        let group = postArray[indexPath.row] as Post
         let imageStr = group.url
         let imageVw = cell.contentView.viewWithTag(100) as! UIImageView
-        Utils.setImage(imgVw: imageVw, imageStr: imageStr, placeHolderImg: nil)
+        Utils.setImage(imgVw: imageVw, imageStr: imageStr, placeHolderImg: kPostPlaceholder)
 
        return cell;
     }
