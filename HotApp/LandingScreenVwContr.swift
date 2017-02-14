@@ -47,7 +47,10 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         let photo = photoArray[indexPath.row]
         Utils.setImage(imgVw: cell.userImageView, imageStr: photo.url, placeHolderImg: kUserPlaceholder)
         cell.userName.text = photo.name
-        
+        cell.userLocation.text = photo.userLocation
+        cell.postHeading.text = photo.postHeader
+        cell.descriptionLbl.text = photo.descriptionText
+
         cell.wallPostCollectionVw.dataSource = self
         cell.wallPostCollectionVw.delegate = self
         
@@ -58,7 +61,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
             
             layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
             layout.minimumInteritemSpacing = 0
-            layout.minimumLineSpacing = 5.0
+            layout.minimumLineSpacing = 3.0
             layout.scrollDirection = UICollectionViewScrollDirection.horizontal
             layout.invalidateLayout()
         }

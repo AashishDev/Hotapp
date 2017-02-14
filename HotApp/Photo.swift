@@ -10,9 +10,12 @@ import UIKit
 import SwiftyJSON
 
 class Photo: NSObject {
-
+    
     var url = ""
     var name = ""
+    var userLocation = ""
+    var postHeader = ""
+    var descriptionText = ""
     var postArray = [Post]()
     
     init(jsonDic:JSON) {
@@ -22,6 +25,15 @@ class Photo: NSObject {
         }
         if let titleString = jsonDic["name"].string {
             self.name =  titleString
+        }
+        if let locationString = jsonDic["userLocation"].string {
+            self.userLocation =  locationString
+        }
+        if let postHeaderString = jsonDic["postHeader"].string {
+            self.postHeader =  postHeaderString
+        }
+        if let descripString = jsonDic["description"].string {
+            self.descriptionText =  descripString
         }
         if let postArr = jsonDic["post"].array {
             

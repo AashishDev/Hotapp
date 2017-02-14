@@ -10,6 +10,9 @@ import UIKit
 
 class WallFeedCell: UITableViewCell {
     
+    @IBOutlet var descriptionLbl: UILabel!
+    @IBOutlet var postHeading: UILabel!
+    @IBOutlet var userLocation: UILabel!
     @IBOutlet var userName: UILabel!
     @IBOutlet var userImageView: UIImageView!
     @IBOutlet var wallPostCollectionVw: UICollectionView!
