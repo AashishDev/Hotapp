@@ -21,9 +21,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         
         Utils.getFeedList { (dataArray) in
-            
             self.photoArray = dataArray;
-
         }
 //        LandingService.getPhotoList(urlString: photoStr) { (dataArray) in
 //           
@@ -46,6 +44,9 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         
         let photo = photoArray[indexPath.row]
         Utils.setImage(imgVw: cell.userImageView, imageStr: photo.url, placeHolderImg: kUserPlaceholder)
+        cell.userImageView.layer.borderColor = UIColor.green.cgColor
+        cell.userImageView.layer.borderWidth = 0.6;
+        
         cell.userName.text = photo.name
         cell.userLocation.text = photo.userLocation
         cell.postHeading.text = photo.postHeader
@@ -59,7 +60,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
             let itemHeight = cell.wallPostCollectionVw.frame.size.height
             layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
             
-            layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+            layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
             layout.minimumInteritemSpacing = 0
             layout.minimumLineSpacing = 3.0
             layout.scrollDirection = UICollectionViewScrollDirection.horizontal
@@ -95,8 +96,41 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         let imageStr = group.url
         let imageVw = cell.contentView.viewWithTag(100) as! UIImageView
         Utils.setImage(imgVw: imageVw, imageStr: imageStr, placeHolderImg: kPostPlaceholder)
+        
+        imageVw.layer.borderColor = UIColor.lightGray.cgColor
+        imageVw.layer.borderWidth = 0.6;
 
        return cell;
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+       /* //instead of 568, choose the origin of your animation
+        cell.frame = CGRectMake(cell.frame.origin.x,
+                                cell.frame.origin.y + 568,
+                                cell.frame.size.width,
+                                cell.frame.size.height);
+        
+        [UIView animateWithDuration:0.5 delay:0.1*indexPath.row options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            //instead of -30, choose how much you want the cell to get "under" the cell above
+            cell.frame = CGRectMake(myRect.origin.x,
+            myRect.origin.y - 30,
+            myRect.size.width,
+            myRect.size.height);
+            
+            } completion:^(BOOL finished){
+            [UIView animateWithDuration:0.5 animations:^{
+            cell.frame = myRect;
+            }];
+            
+            }];*/
+        
+        cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: cell.frame.size.width, height: cell.frame.size.height)
+        
+        
+        
+        
     }
     
 }
