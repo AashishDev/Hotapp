@@ -126,15 +126,25 @@
                                         </constraints>
                                         <state key="normal" image="search.png"/>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMA-tp-zPx">
+                                        <rect key="frame" x="0.0" y="61" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="0Ai-Wr-FT9"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Q4z-eR-wnv" firstAttribute="centerY" secondItem="anE-2A-SDI" secondAttribute="centerY" constant="8" id="0iM-HL-ddn"/>
                                     <constraint firstItem="XkK-hl-2G7" firstAttribute="centerY" secondItem="anE-2A-SDI" secondAttribute="centerY" constant="8" id="85O-GD-3Dx"/>
                                     <constraint firstItem="XBH-Is-yeo" firstAttribute="centerX" secondItem="anE-2A-SDI" secondAttribute="centerX" id="AXf-8x-3z3"/>
+                                    <constraint firstItem="aMA-tp-zPx" firstAttribute="leading" secondItem="anE-2A-SDI" secondAttribute="leading" id="KW0-ex-OuP"/>
                                     <constraint firstAttribute="height" constant="64" id="Ofj-FB-egT"/>
+                                    <constraint firstAttribute="bottom" secondItem="aMA-tp-zPx" secondAttribute="bottom" constant="2" id="U1L-UZ-Mhw"/>
                                     <constraint firstAttribute="trailing" secondItem="XkK-hl-2G7" secondAttribute="trailing" constant="3" id="n9P-3J-X3V"/>
                                     <constraint firstAttribute="bottom" secondItem="XBH-Is-yeo" secondAttribute="bottom" constant="12" id="pdO-Mz-HP2"/>
+                                    <constraint firstAttribute="trailing" secondItem="aMA-tp-zPx" secondAttribute="trailing" id="vzf-Y3-nv9"/>
                                     <constraint firstItem="Q4z-eR-wnv" firstAttribute="leading" secondItem="anE-2A-SDI" secondAttribute="leading" constant="2" id="zvx-jE-UWk"/>
                                 </constraints>
                             </view>
