@@ -29,7 +29,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
 //           // print("Final result is: \(dataArray)")
 //            self.wallFeedTable.reloadData()
 //        }
-        wallFeedTable.rowHeight = 265
+        wallFeedTable.rowHeight = 230
     }
     
     // Table Method ***************////*******************
@@ -49,7 +49,6 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         
         cell.userName.text = photo.name
         cell.userLocation.text = photo.userLocation
-        cell.postHeading.text = photo.postHeader
         cell.descriptionLbl.text = photo.descriptionText
 
         cell.wallPostCollectionVw.dataSource = self
