@@ -4,7 +4,7 @@
 //
 //  Created by Aashish Tyagi on 1/18/17.
 //  Copyright © 2017 Aashish Tyagi. All rights reserved.
-//
+// https://ios.uplabs.com/posts/instant-photo-splash-screen-freebie
 
 import UIKit
 
@@ -23,12 +23,6 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         Utils.getFeedList { (dataArray) in
             self.photoArray = dataArray;
         }
-//        LandingService.getPhotoList(urlString: photoStr) { (dataArray) in
-//           
-//            self.photoArray = dataArray;
-//           // print("Final result is: \(dataArray)")
-//            self.wallFeedTable.reloadData()
-//        }
         wallFeedTable.rowHeight = 230
     }
     
