@@ -14,7 +14,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     let identifier = "WallFeedCell"
     let photoStr = "https://jsonplaceholder.typicode.com/photos"
 
-    
+    var animatedIndex = [IndexPath]()
     var photoArray = [Photo]()
 
     override func viewDidLoad() {
@@ -71,6 +71,31 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         return cell;
     }
     
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        
+        if(!animatedIndex.contains(indexPath)){
+            animatedIndex.append(indexPath)
+            
+            let myRect: CGRect = tableView.rectForRow(at: indexPath)
+            //instead of 568, choose the origin of your animation
+            cell.frame = CGRect(x: CGFloat(cell.frame.origin.x), y: CGFloat(cell.frame.origin.y + 568), width: CGFloat(cell.frame.size.width), height: CGFloat(cell.frame.size.height))
+            
+            let value = Double(indexPath.row)*0.1
+            UIView.animate(withDuration: 0.5, delay:value, options: .curveEaseInOut, animations: {() -> Void in
+                //instead of -30, choose how much you want the cell to get "under" the cell above
+                cell.frame = CGRect(x: CGFloat(myRect.origin.x), y: CGFloat(myRect.origin.y - 30), width: CGFloat(myRect.size.width), height: CGFloat(myRect.size.height))
+            }, completion: {(_ finished: Bool) -> Void in
+                UIView.animate(withDuration: 0.5, animations: {() -> Void in
+                    cell.frame = myRect
+                })
+            })
+        }
+    }
+    
+    
+    
     // Collection Method ***************////*******************
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
     
@@ -97,13 +122,13 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         Utils.setImage(imgVw: imageVw, imageStr: imageStr, placeHolderImg: kPostPlaceholder)
         
         imageVw.layer.borderColor = UIColor.lightGray.cgColor
-        imageVw.layer.borderWidth = 0.6;
+        imageVw.layer.borderWidth = 0.8;
 
        return cell;
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+  /*  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
        /* //instead of 568, choose the origin of your animation
         cell.frame = CGRectMake(cell.frame.origin.x,
@@ -124,12 +149,22 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
             }];
             
             }];*/
+        let myreact = cell.frame
         
-        cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: cell.frame.size.width, height: cell.frame.size.height)
+        cell.frame = CGRect(x: cell.frame.origin.x+320, y: cell.frame.origin.y, width: cell.frame.size.width, height: cell.frame.size.height)
         
+         let value = Double(indexPath.row)*0.1
+         UIView.animate(withDuration: 0.8, delay:value, options: .curveEaseInOut, animations: {
+            
+            cell.frame = CGRect(x: myreact.origin.x+100, y: myreact.origin.y, width: myreact.size.width, height: myreact.size.height)
+
+         }) { (finish) in
+            
+            UIView.animate(withDuration: 0.8, animations: {
+                cell.frame = myreact
+            })
+        }
         
-        
-        
-    }
+    }*/
     
 }
