@@ -71,6 +71,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="loginBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idW-pl-pWr"/>
+                                                    <segue destination="F5w-XF-7on" kind="show" id="eHL-xR-mLg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JO-Pd-pa3">
@@ -158,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="135" y="439"/>
         </scene>
-        <!--Landing Screen Vw Contr-->
+        <!--WallFeed-->
         <scene sceneID="Mzb-VD-prD">
             <objects>
                 <viewController storyboardIdentifier="LandingScreenVwContr" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dhv-Wb-AGR" customClass="LandingScreenVwContr" customModule="HotApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -222,7 +223,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="282" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yaA-wM-7hP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WallFeedCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WallFeedCell" rowHeight="230" id="Q8p-a7-cbo" customClass="WallFeedCell" customModule="HotApp" customModuleProvider="target">
@@ -405,6 +406,7 @@
                             <constraint firstItem="anE-2A-SDI" firstAttribute="top" secondItem="Q4E-N9-v2I" secondAttribute="top" id="vFW-83-Vno"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="WallFeed" image="slide.png" id="OCC-vJ-E34"/>
                     <navigationItem key="navigationItem" id="rdT-yH-Nae"/>
                     <connections>
                         <outlet property="wallFeedTable" destination="yaA-wM-7hP" id="5wi-K2-nBc"/>
@@ -412,7 +414,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cyn-hx-NkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1524" y="445"/>
+            <point key="canvasLocation" x="3036" y="429.53523238380814"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="yKg-0H-Ewx">
+            <objects>
+                <viewController id="DMQ-jO-NhN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NuG-NW-OYN"/>
+                        <viewControllerLayoutGuide type="bottom" id="KWk-wQ-zpd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Ov-z9-aCr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Location" image="tb_loc.png" id="Xsx-MW-CEV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECK-XX-06j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2124" y="1243"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="Gkx-zz-eer">
+            <objects>
+                <viewController id="24D-BR-Rnl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="609-Jh-YPj"/>
+                        <viewControllerLayoutGuide type="bottom" id="RVT-DS-rez"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dxb-36-0fa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" image="tb_chat1.png" id="GVh-40-3e0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQ2-eW-2UB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2770" y="1243"/>
+        </scene>
+        <!--Seeting-->
+        <scene sceneID="IaD-i8-VMB">
+            <objects>
+                <viewController id="cfg-Pe-yin" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6nY-ef-NXv"/>
+                        <viewControllerLayoutGuide type="bottom" id="aro-3s-qqX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1KM-NS-OlB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Seeting" image="search.png" id="obL-Y0-QMP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z4g-Wh-WEw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3487" y="1245"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KPX-7s-bAB">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="F5w-XF-7on" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="68L-GI-ko8">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dhv-Wb-AGR" kind="relationship" relationship="viewControllers" id="Sqr-ex-d5M"/>
+                        <segue destination="24D-BR-Rnl" kind="relationship" relationship="viewControllers" id="slS-wc-5ha"/>
+                        <segue destination="cfg-Pe-yin" kind="relationship" relationship="viewControllers" id="XJM-lE-RB4"/>
+                        <segue destination="DMQ-jO-NhN" kind="relationship" relationship="viewControllers" id="Jht-tT-zym"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ze5-Cg-TrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2096.8000000000002" y="429.53523238380814"/>
         </scene>
     </scenes>
     <resources>
@@ -422,5 +501,7 @@
         <image name="location.png" width="16" height="16"/>
         <image name="search.png" width="24" height="24"/>
         <image name="slide.png" width="24" height="24"/>
+        <image name="tb_chat1.png" width="24" height="24"/>
+        <image name="tb_loc.png" width="24" height="24"/>
     </resources>
 </document>

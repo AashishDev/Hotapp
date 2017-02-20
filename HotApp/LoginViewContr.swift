@@ -15,8 +15,8 @@ class LoginViewContr: UIViewController {
     }
     @IBAction func loginBtnTapped(_ sender: UIButton) {
         
-        let landingScreen = self.storyboard?.instantiateViewController(withIdentifier: "LandingScreenVwContr")
-        self.navigationController?.pushViewController(landingScreen!, animated: true)
+        //let landingScreen = self.storyboard?.instantiateViewController(withIdentifier: "LandingScreenVwContr")
+       // self.navigationController?.pushViewController(landingScreen!, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

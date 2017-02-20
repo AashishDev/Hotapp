@@ -60,7 +60,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
             layout.invalidateLayout()
         }
         cell.wallPostCollectionVw.tag = indexPath.row
-        cell.wallPostCollectionVw.reloadData()
+       // cell.wallPostCollectionVw.reloadData()
         
         return cell;
     }
@@ -83,6 +83,9 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
             }, completion: {(_ finished: Bool) -> Void in
                 UIView.animate(withDuration: 0.5, animations: {() -> Void in
                     cell.frame = myRect
+                    
+                    let cell1 = cell as! WallFeedCell
+                    cell1.wallPostCollectionVw.reloadData()
                 })
             })
         }
@@ -122,7 +125,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     }
     
     
-  /*  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
        /* //instead of 568, choose the origin of your animation
         cell.frame = CGRectMake(cell.frame.origin.x,
@@ -159,6 +162,6 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
             })
         }
         
-    }*/
+    }
     
 }
