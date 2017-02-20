@@ -68,7 +68,6 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        
         if(!animatedIndex.contains(indexPath)){
             animatedIndex.append(indexPath)
             
@@ -91,8 +90,6 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    
-    
     // Collection Method ***************////*******************
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
     
@@ -106,7 +103,6 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         print(collectionView.tag)
-    
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"PostCollectionCell", for: indexPath)
         let rowIndex = collectionView.tag
         
@@ -127,27 +123,7 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
-       /* //instead of 568, choose the origin of your animation
-        cell.frame = CGRectMake(cell.frame.origin.x,
-                                cell.frame.origin.y + 568,
-                                cell.frame.size.width,
-                                cell.frame.size.height);
-        
-        [UIView animateWithDuration:0.5 delay:0.1*indexPath.row options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            //instead of -30, choose how much you want the cell to get "under" the cell above
-            cell.frame = CGRectMake(myRect.origin.x,
-            myRect.origin.y - 30,
-            myRect.size.width,
-            myRect.size.height);
-            
-            } completion:^(BOOL finished){
-            [UIView animateWithDuration:0.5 animations:^{
-            cell.frame = myRect;
-            }];
-            
-            }];*/
         let myreact = cell.frame
-        
         cell.frame = CGRect(x: cell.frame.origin.x+320, y: cell.frame.origin.y, width: cell.frame.size.width, height: cell.frame.size.height)
         
          let value = Double(indexPath.row)*0.1
@@ -161,7 +137,6 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
                 cell.frame = myreact
             })
         }
-        
     }
     
 }
