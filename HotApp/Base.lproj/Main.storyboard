@@ -81,6 +81,9 @@
                                                     <constraint firstAttribute="height" constant="55" id="ds0-Eq-5Nf"/>
                                                 </constraints>
                                                 <state key="normal" image="gplus.png"/>
+                                                <connections>
+                                                    <action selector="gPlusLoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vjE-ht-xWI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltr-CO-b0l">
                                                 <rect key="frame" x="113.5" y="534" width="55" height="55"/>
@@ -90,6 +93,9 @@
                                                 </constraints>
                                                 <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" image="fb_logo.png"/>
+                                                <connections>
+                                                    <action selector="fbLoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PiB-nW-gTk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -230,7 +236,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q8p-a7-cbo" id="tmJ-dd-TBM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7N-Qp-bg6" userLabel="CellBgVw">
@@ -479,6 +485,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="F5w-XF-7on" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="68L-GI-ko8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
