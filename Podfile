@@ -6,5 +6,7 @@ target 'HotApp' do
     pod 'Alamofire', '~> 4.3'
     pod 'SwiftyJSON'
     pod 'AlamofireImage', '~> 3.1'
-
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
 end

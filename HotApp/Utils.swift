@@ -29,6 +29,7 @@ class Utils: NSObject {
         imgVw.af_setImage(withURL: url, placeholderImage: placeholderImage)
     }
     
+    
     static func getFeedList(completion:@escaping (_ photoList:[Photo]) -> Void){
     
         if let path = Bundle.main.path(forResource: "feedPost", ofType: "json") {
@@ -56,7 +57,7 @@ class Utils: NSObject {
             print("Invalid filename/path.")
         }
     }
-    
+        
     
 }
 
