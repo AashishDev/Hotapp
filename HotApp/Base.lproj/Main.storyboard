@@ -142,6 +142,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="POh-wI-rca"/>
+                    <connections>
+                        <outlet property="yourNameText" destination="Wbo-WS-Yna" id="Icp-EE-3EP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

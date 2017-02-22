@@ -9,4 +9,5 @@ target 'HotApp' do
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FacebookShare'
+    pod 'SVProgressHUD'
 end

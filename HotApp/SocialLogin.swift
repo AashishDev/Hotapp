@@ -17,6 +17,7 @@ public class SocialLogin: NSObject {
     /******** Facebook**************************************/
     static func fbLogin(controller:UIViewController,completionBlock:@escaping (_ userInfoDictionary:NSDictionary?,_ error:NSError?) ->Void) {
         
+        Utils.hideProgress()
         let loginManager = LoginManager()
         loginManager.logIn([.publicProfile], viewController: controller) { loginResult in
             
@@ -28,11 +29,13 @@ public class SocialLogin: NSObject {
                 completionBlock(nil, nil)
             //print("User Cancelled login")
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+                
+                Utils.showProgress(msg: kFbProgressMsg)
                 self.getFbUser(completionBlock: { (userInfo, error) in
                     
                     completionBlock(userInfo,nil)
                 })
-            default: break
+            // default: break
             }
         }
     }

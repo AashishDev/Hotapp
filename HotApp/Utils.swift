@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import AlamofireImage
+import SVProgressHUD
 
 class Utils: NSObject {
     
@@ -57,7 +58,21 @@ class Utils: NSObject {
             print("Invalid filename/path.")
         }
     }
+    
+    
+    static func showProgress(msg:String) {
+    
+        SVProgressHUD.show(withStatus: msg)
+    }
+    
+    
+    static func hideProgress() {
         
+        DispatchQueue.main.async {
+            SVProgressHUD.dismiss()
+        }
+    }
+    
     
 }
 

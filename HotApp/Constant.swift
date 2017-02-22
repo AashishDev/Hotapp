@@ -24,7 +24,10 @@ let kPostPlaceholder = "post_placeholder.png"
 
 
 
+//3 Progress Msg
 
+let kProgressMsg = "Loading..."
+let kFbProgressMsg = "Fetching profile details..."
 
 //class Constant: NSObject {
 //
