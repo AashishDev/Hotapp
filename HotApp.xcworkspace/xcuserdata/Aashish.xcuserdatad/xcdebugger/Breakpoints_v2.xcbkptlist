@@ -88,22 +88,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HotApp/SocialLogin.swift"
-            timestampString = "509475293.452546"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "getFbUser(completionBlock:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Pods/SwiftLoader/src/SwiftLoader/SwiftLoader.swift"
             timestampString = "509473766.710113"
             startingColumnNumber = "9223372036854775807"
@@ -111,22 +95,6 @@
             startingLineNumber = "235"
             endingLineNumber = "235"
             landmarkName = "drawBackgroundCircle(partial:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HotApp/SocialLogin.swift"
-            timestampString = "509475293.452546"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "fbLogin(controller:completionBlock:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

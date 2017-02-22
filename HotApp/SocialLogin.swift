@@ -19,7 +19,7 @@ public class SocialLogin: NSObject {
         
         Utils.hideProgress()
         let loginManager = LoginManager()
-        loginManager.logIn([.publicProfile], viewController: controller) { loginResult in
+        loginManager.logIn([.publicProfile,.email], viewController: controller) { loginResult in
             
             switch loginResult {
                 

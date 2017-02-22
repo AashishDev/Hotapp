@@ -19,8 +19,11 @@ class LoginViewContr: UIViewController {
         
         if (yourNameText.text?.characters.count)! > 0 {
         
-            let landingScreen = self.storyboard?.instantiateViewController(withIdentifier: "LandingScreenVwContr")
+            let landingScreen = self.storyboard?.instantiateViewController(withIdentifier:"TabBarController")
             self.navigationController?.pushViewController(landingScreen!, animated: true)
+        }
+        else {
+            Utils.showAlert(title: "Alert", msg: "Please login with Facebook")
         }
     }
     
@@ -30,13 +33,10 @@ class LoginViewContr: UIViewController {
         Utils.showProgress(msg: kProgressMsg)
         SocialLogin.fbLogin(controller: self) { (userInfo, error) in
             if error == nil {
-                print("Fb Login : \(userInfo!)")
-                if let name:String = userInfo?["name"] as! String? {
-                
+                //print("Fb Login : \(userInfo!)")
+                if let name:String = userInfo?["email"] as! String? {
                     self.yourNameText.text = name
                 }
-                
-               
                 Utils.hideProgress()
             }
         }
@@ -44,7 +44,7 @@ class LoginViewContr: UIViewController {
     
     // 2 G+ Login
     @IBAction func gPlusLoginTapped(_ sender: UIButton) {
-        
+
     }
     
     override func didReceiveMemoryWarning() {

@@ -71,7 +71,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="loginBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idW-pl-pWr"/>
-                                                    <segue destination="F5w-XF-7on" kind="show" id="eHL-xR-mLg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JO-Pd-pa3">
@@ -485,7 +484,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="KPX-7s-bAB">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="F5w-XF-7on" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F5w-XF-7on" customClass="TabBarController" customModule="HotApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="68L-GI-ko8">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -501,7 +500,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ze5-Cg-TrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2096.8000000000002" y="429.53523238380814"/>
+            <point key="canvasLocation" x="1817" y="446"/>
         </scene>
     </scenes>
     <resources>
