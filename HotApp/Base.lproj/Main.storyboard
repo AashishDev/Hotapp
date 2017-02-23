@@ -238,7 +238,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q8p-a7-cbo" id="tmJ-dd-TBM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7N-Qp-bg6" userLabel="CellBgVw">
@@ -427,7 +427,7 @@
         <!--Location-->
         <scene sceneID="yKg-0H-Ewx">
             <objects>
-                <viewController id="DMQ-jO-NhN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationVwController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DMQ-jO-NhN" customClass="LocationVwController" customModule="HotApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NuG-NW-OYN"/>
                         <viewControllerLayoutGuide type="bottom" id="KWk-wQ-zpd"/>
