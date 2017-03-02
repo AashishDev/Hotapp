@@ -11,6 +11,7 @@
 		AE20B33D1E4A37CB00DF1080 /* LandingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE20B33C1E4A37CB00DF1080 /* LandingService.swift */; };
 		AE20B33F1E4A39EA00DF1080 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE20B33E1E4A39EA00DF1080 /* Photo.swift */; };
 		AE48779F1E366DAF002E0447 /* WallFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48779E1E366DAF002E0447 /* WallFeedCell.swift */; };
+		AE4F18E11E65D78A001A536C /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4F18E01E65D78A001A536C /* MainNavigationController.swift */; };
 		AE76E0421E4CD6310067F6A4 /* feedPost.json in Resources */ = {isa = PBXBuildFile; fileRef = AE76E0411E4CD6310067F6A4 /* feedPost.json */; };
 		AE797DDD1E5CA9A200E3F486 /* SocialLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE797DDC1E5CA9A200E3F486 /* SocialLogin.swift */; };
 		AE7F32E81E5DFFDA008EF929 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7F32E71E5DFFDA008EF929 /* TabBarController.swift */; };
@@ -58,6 +59,7 @@
 		AE20B33C1E4A37CB00DF1080 /* LandingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingService.swift; sourceTree = "<group>"; };
 		AE20B33E1E4A39EA00DF1080 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		AE48779E1E366DAF002E0447 /* WallFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallFeedCell.swift; sourceTree = "<group>"; };
+		AE4F18E01E65D78A001A536C /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		AE76E0411E4CD6310067F6A4 /* feedPost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feedPost.json; sourceTree = "<group>"; };
 		AE797DDC1E5CA9A200E3F486 /* SocialLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialLogin.swift; sourceTree = "<group>"; };
 		AE7F32E71E5DFFDA008EF929 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		AE4F18DF1E65D6F1001A536C /* NavigatIonDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				AE4F18E01E65D78A001A536C /* MainNavigationController.swift */,
+			);
+			name = NavigatIonDrawer;
+			sourceTree = "<group>";
+		};
 		AED24F201E2FC18500431DA7 = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +247,7 @@
 		AED24F431E2FC1D100431DA7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AE4F18DF1E65D6F1001A536C /* NavigatIonDrawer */,
 				AED24F4C1E2FC28B00431DA7 /* LoginViewContr.swift */,
 				AED24F4E1E2FC2B200431DA7 /* LandingScreenVwContr.swift */,
 				AE48779E1E366DAF002E0447 /* WallFeedCell.swift */,
@@ -432,6 +443,7 @@
 			files = (
 				AE20B33F1E4A39EA00DF1080 /* Photo.swift in Sources */,
 				AED24F521E2FCE0800431DA7 /* NetworkConfig.swift in Sources */,
+				AE4F18E11E65D78A001A536C /* MainNavigationController.swift in Sources */,
 				AED24F2D1E2FC18500431DA7 /* AppDelegate.swift in Sources */,
 				AE7F32E81E5DFFDA008EF929 /* TabBarController.swift in Sources */,
 				AED24F471E2FC22300431DA7 /* Utils.swift in Sources */,

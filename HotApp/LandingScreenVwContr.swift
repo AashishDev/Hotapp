@@ -113,4 +113,11 @@ class LandingScreenVwContr: UIViewController, UITableViewDataSource, UITableView
        return cell;
     }
     
+    
+    @IBAction func slideMenuBtnTapped(_ sender: UIButton) {
+        
+        let navController = self.parent?.navigationController as! MainNavigationController?
+        navController?.showDrawer()
+    }
+    
 }

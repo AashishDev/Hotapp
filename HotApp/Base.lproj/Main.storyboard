@@ -147,12 +147,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="442"/>
+            <point key="canvasLocation" x="964" y="435"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="hEU-f5-FvA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Y43-45-cGA" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="Y43-45-cGA" customClass="MainNavigationController" customModule="HotApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="202-cT-S5e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -160,12 +160,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1Zm-gv-9Yi"/>
+                        <segue destination="dhv-Wb-AGR" kind="relationship" relationship="rootViewController" id="J1k-AR-VVc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bs-oA-fvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="439"/>
+            <point key="canvasLocation" x="2094" y="-420"/>
         </scene>
         <!--WallFeed-->
         <scene sceneID="Mzb-VD-prD">
@@ -199,6 +199,9 @@
                                             <constraint firstAttribute="width" constant="40" id="tl7-Zp-S6V"/>
                                         </constraints>
                                         <state key="normal" image="slide.png"/>
+                                        <connections>
+                                            <action selector="slideMenuBtnTapped:" destination="dhv-Wb-AGR" eventType="touchUpInside" id="syM-WZ-XS9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkK-hl-2G7">
                                         <rect key="frame" x="332" y="20" width="40" height="40"/>
@@ -238,7 +241,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="230"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q8p-a7-cbo" id="tmJ-dd-TBM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7N-Qp-bg6" userLabel="CellBgVw">
@@ -492,7 +495,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="dhv-Wb-AGR" kind="relationship" relationship="viewControllers" id="Sqr-ex-d5M"/>
                         <segue destination="24D-BR-Rnl" kind="relationship" relationship="viewControllers" id="slS-wc-5ha"/>
                         <segue destination="cfg-Pe-yin" kind="relationship" relationship="viewControllers" id="XJM-lE-RB4"/>
                         <segue destination="DMQ-jO-NhN" kind="relationship" relationship="viewControllers" id="Jht-tT-zym"/>
