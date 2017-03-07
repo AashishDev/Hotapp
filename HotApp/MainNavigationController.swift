@@ -15,7 +15,7 @@ class MainNavigationController: UINavigationController, UITableViewDataSource,UI
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.green
+        self.view.backgroundColor = UIColor.white
         createDrawerView()
         
     }
@@ -23,14 +23,15 @@ class MainNavigationController: UINavigationController, UITableViewDataSource,UI
     func createDrawerView(){
         
         drawerVw.frame = CGRect(x: 0, y: 0, width: self.view.frame.width-100, height: self.view.frame.size.height)
-        drawerVw.backgroundColor = UIColor.orange
+        //drawerVw.backgroundColor = UIColor.orange
         self.view.addSubview(drawerVw)
         
         let menuTable = UITableView()
-        menuTable.frame = CGRect(x: 0, y: 0, width:drawerVw.frame.width, height:drawerVw.frame.size.height)
+        menuTable.frame = CGRect(x: 0, y: 50, width:drawerVw.frame.width, height:drawerVw.frame.size.height-50)
         menuTable.dataSource = self
         menuTable.delegate = self
         drawerVw.addSubview(menuTable)
+        hideDrawer()
     }
     
     
@@ -77,24 +78,41 @@ class MainNavigationController: UINavigationController, UITableViewDataSource,UI
         if (cell == nil) {
             cell = UITableViewCell(style:UITableViewCellStyle.subtitle, reuseIdentifier:cellReuseIdentifier)
         }
-        cell!.textLabel!.text = "Hello World"
+        
+        if(indexPath.row==0){
+            cell!.textLabel!.text = "Home"
+        }
+        else{
+            cell!.textLabel!.text = "Location"
+        }
+        
         return cell!
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 5
+        return 2
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         var navigationStack = [UIViewController]()
-
         navigationStack = self.viewControllers
-        let vc:LandingScreenVwContr = self.storyboard?.instantiateViewController(withIdentifier: "LandingScreenVwContr") as! LandingScreenVwContr
-        navigationStack.append(vc)
-        self.setViewControllers(navigationStack, animated: true)
+
+        if(indexPath.row==0){
+        
+            let vc:LandingScreenVwContr = self.storyboard?.instantiateViewController(withIdentifier: "LandingScreenVwContr") as! LandingScreenVwContr
+            navigationStack.append(vc)
+            self.setViewControllers(navigationStack, animated: true)
+        }
+        else if(indexPath.row==1){
+        
+            
+            let vc:LocationVwController = self.storyboard?.instantiateViewController(withIdentifier: "LocationVwController") as! LocationVwController
+            navigationStack.append(vc)
+            self.setViewControllers(navigationStack, animated: true)
+        }
       
 //        var FinalNavigationStack = [Any](arrayLiteral: self.viewControllers)
 //        var vc: UIViewController? = FinalNavigationStack.last

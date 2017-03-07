@@ -14,12 +14,16 @@ class LoginViewContr: UIViewController {
     @IBOutlet var yourNameText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let navController = self.parent?.navigationController as! MainNavigationController?
+        navController?.showDrawer()
     }
     @IBAction func loginBtnTapped(_ sender: UIButton) {
         
         if (yourNameText.text?.characters.count)! > 0 {
         
-            let landingScreen = self.storyboard?.instantiateViewController(withIdentifier:"TabBarController")
+            let landingScreen = self.storyboard?.instantiateViewController(withIdentifier:"LandingScreenVwContr")
             self.navigationController?.pushViewController(landingScreen!, animated: true)
         }
         else {
